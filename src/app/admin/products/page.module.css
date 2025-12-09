@@ -1,0 +1,280 @@
+/* Admin Products Page */
+.productsPage {}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+}
+
+.header h1 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-1);
+}
+
+.header p {
+    color: var(--gray-600);
+    font-size: var(--text-sm);
+}
+
+.addBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: var(--primary-gold);
+    color: var(--white);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.addBtn:hover {
+    background: var(--primary-gold-dark);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.searchBox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+}
+
+.searchBox input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: var(--text-sm);
+}
+
+.searchBox svg {
+    color: var(--gray-400);
+}
+
+.filterBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    cursor: pointer;
+}
+
+.filterBtn:hover {
+    border-color: var(--primary-gold);
+}
+
+/* Table */
+.tableCard {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: var(--space-4);
+    text-align: left;
+    font-size: var(--text-sm);
+}
+
+.table th {
+    background: var(--gray-50);
+    color: var(--gray-600);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+}
+
+.table td {
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.productCell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.productImage {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-200);
+    border-radius: var(--radius-sm);
+    color: var(--gray-400);
+}
+
+.status {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    font-size: 10px;
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+}
+
+.status.active {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status.out_of_stock {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.editBtn,
+.deleteBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.editBtn:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+}
+
+.deleteBtn:hover {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: var(--space-4);
+}
+
+.modal {
+    width: 100%;
+    max-width: 500px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.formGroup {
+    margin-bottom: var(--space-4);
+}
+
+.formGroup label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-2);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: var(--space-3);
+    font-size: var(--text-sm);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+}
+
+.modalActions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+    margin-top: var(--space-6);
+}
+
+.cancelBtn {
+    padding: var(--space-3) var(--space-5);
+    background: none;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    cursor: pointer;
+}
+
+.cancelBtn:hover {
+    border-color: var(--secondary-dark);
+}
+
+.submitBtn {
+    padding: var(--space-3) var(--space-5);
+    background: var(--primary-gold);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background: var(--primary-gold-dark);
+}
