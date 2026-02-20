@@ -180,7 +180,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Copyright */}
             <div className={styles.copyright}>
                 <div className={styles.container}>
                     <div className={styles.copyrightContent}>
