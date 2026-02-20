@@ -62,7 +62,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Main Footer */}
             <div className={styles.footerMain}>
                 <div className={styles.container}>
                     <div className={styles.footerGrid}>
